@@ -17,11 +17,5 @@ namespace XMLandWebServices
 
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            var stringResult = service.GetData(counter);
-            counter++;
-            ButtonView.Content = stringResult;
-        }
     }
 }

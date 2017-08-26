@@ -21,6 +21,8 @@ namespace XMLandWebServices.ViewModel
         /// </summary>
         public MainViewModel()
         {
+
+            var stringTest = "123";
             ////if (IsInDesignMode)
             ////{
             ////    // Code runs in Blend --> create design time data.
