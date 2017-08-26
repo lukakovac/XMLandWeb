@@ -15,7 +15,7 @@ namespace Bank
         {
             value = value + counter;
             counter++;
-            return string.Format("You entered: {0}", value);
+            return string.Format("Hello, Hello! You entered: {0}", value);
         }
 
         public CompositeType GetDataUsingDataContract(CompositeType composite)
