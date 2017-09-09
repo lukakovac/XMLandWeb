@@ -24,5 +24,7 @@ namespace XML.Company.Models
         public string BillingDate { get; set; }
 
         public string GoodsValue { get; set; }
+
+        public string  ServicePrice { get; set; }
     }
 }
