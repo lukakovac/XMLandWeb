@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XML.Company", "XML.Company\XML.Company.csproj", "{7466ABC7-5751-40F2-8E43-08597E610FB8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XML.Bank", "XML.Bank\XML.Bank.csproj", "{07852EC9-3AC2-4F3C-ADF5-67DEC2A239F4}"
+	ProjectSection(ProjectDependencies) = postProject
+		{290DBA44-9F36-4D48-8324-45AD00898F93} = {290DBA44-9F36-4D48-8324-45AD00898F93}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XML.CentralBank", "XML.CentralBank\XML.CentralBank.csproj", "{290DBA44-9F36-4D48-8324-45AD00898F93}"
 EndProject

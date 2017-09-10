@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/XML.CentralBank.Model" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/XML.CentralBank.Model" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="MT103">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Ammount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="PayerAccount" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PayerBankAccountNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RecipientAccount" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RecipientBankAccountNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SWIFTPayerBank" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SWIFTRecipientBank" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MT103" nillable="true" type="tns:MT103" />
+  <xs:complexType name="MT900">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Ammount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="MTMessageId" type="xs:int" />
+      <xs:element minOccurs="0" name="PayerBankAccountNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SWIFTPayerBank" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MT900" nillable="true" type="tns:MT900" />
+  <xs:complexType name="MT910">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Ammount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="MTMessageId" type="xs:int" />
+      <xs:element minOccurs="0" name="RecipientBankAccountNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SWIFTRecipientBank" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MT910" nillable="true" type="tns:MT910" />
+</xs:schema>

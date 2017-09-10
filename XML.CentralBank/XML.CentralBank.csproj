@@ -68,6 +68,7 @@
     <Compile Include="CentralBankService.svc.cs">
       <DependentUpon>CentralBankService.svc</DependentUpon>
     </Compile>
+    <Compile Include="IBankCallBack.cs" />
     <Compile Include="ICentralBankService.cs" />
     <Compile Include="Model\MT103.cs" />
     <Compile Include="Model\MT900.cs" />

@@ -1,1 +1,1 @@
-﻿<%@ ServiceHost Language="C#" Debug="true" Service="XML.CentralBank.Service1" CodeBehind="CentralBankService.svc.cs" %>
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="XML.CentralBank.CentralBankService" CodeBehind="CentralBankService.svc.cs" %>

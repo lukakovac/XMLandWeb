@@ -12,9 +12,6 @@ namespace XML.Bank
 
         [OperationContract]
         AccountStatementResponse GetAccountStatement(AccountStatementRequest request);
-
-        [OperationContract]
-        void RegisterNewClient(Client client);
     }
 
 }

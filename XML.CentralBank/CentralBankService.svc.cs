@@ -5,29 +5,39 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
+using XML.CentralBank.Model;
 
 namespace XML.CentralBank
 {
-    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service1" in code, svc and config file together.
-    // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
-    public class Service1 : ICentralBankService
+    [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single)]
+    public class CentralBankService : ICentralBankService
     {
-        public string GetData(int value)
+        private Dictionary<string, IBankCallBack> _banks;
+
+        public CentralBankService()
         {
-            return string.Format("You entered: {0}", value);
+            Console.WriteLine("Making Bank Service");
+            _banks = new Dictionary<string, IBankCallBack>();
         }
 
-        public CompositeType GetDataUsingDataContract(CompositeType composite)
+        public bool RegisterBankClient(string bankId)
         {
-            if (composite == null)
+            try
             {
-                throw new ArgumentNullException("composite");
+                _banks.Add(bankId, OperationContext.Current.GetCallbackChannel<IBankCallBack>());
+                return true;
             }
-            if (composite.BoolValue)
+            catch
             {
-                composite.StringValue += "Suffix";
+                return false;
             }
-            return composite;
+        }
+
+        public void RTGSRequest(MT103 requestMessage)
+        {
+            Console.WriteLine("REQUEST");
+            _banks[requestMessage.RecipientAccount.Substring(0, 3)].MT103Callback(requestMessage);
+            _banks[requestMessage.PayerAccount.Substring(0, 3)].MT900CallBack(new MT900() { PayerBankAccountNumber = requestMessage.PayerBankAccountNumber, Ammount = requestMessage.Ammount});
         }
     }
 }
