@@ -3,6 +3,7 @@ using XML.CentralBank.Model;
 
 namespace XML.CentralBank
 {
+    [ServiceContract]
     public interface IBankCallBack
     {
         [OperationContract(IsOneWay = true)]

@@ -4,6 +4,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using XML.Company.ConnectedServices.BankServiceReference;
+using Microsoft.EntityFrameworkCore;
+using XML.Company.Models;
 
 namespace XML.Company
 {
@@ -28,6 +30,9 @@ namespace XML.Company
             services.AddMvc();
 
             services.AddScoped<IBankService, BankServiceClient>();
+
+            services.AddDbContext<XMLCompanyContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("XMLCompanyContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

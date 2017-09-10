@@ -1,0 +1,79 @@
+@model XML.Company.Models.Invoice
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Home/Index.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Invoice</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MessageId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MessageId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SupplierName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SupplierName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SupplierAddress)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SupplierAddress)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PIBSupplier)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PIBSupplier)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BuyerName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BuyerName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BuyerAddress)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BuyerAddress)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BuyerAccount)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BuyerAccount)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BillingDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BillingDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.GoodsValue)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.GoodsValue)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ServicePrice)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ServicePrice)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

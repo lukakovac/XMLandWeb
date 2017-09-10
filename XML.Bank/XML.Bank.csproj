@@ -62,7 +62,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="BankService.svc" />
-    <None Include="Connected Services\CentralBankServiceReference\CentralBankService.disco" />
     <None Include="Connected Services\CentralBankServiceReference\configuration91.svcinfo" />
     <None Include="Connected Services\CentralBankServiceReference\configuration.svcinfo" />
     <None Include="Connected Services\CentralBankServiceReference\Reference.svcmap">
@@ -94,14 +93,14 @@
     <Folder Include="Model\BankMessages\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\CentralBankServiceReference\CentralBankService.wsdl" />
-    <None Include="Connected Services\CentralBankServiceReference\CentralBankService.xsd">
+    <None Include="Connected Services\CentralBankServiceReference\service.wsdl" />
+    <None Include="Connected Services\CentralBankServiceReference\service.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\CentralBankServiceReference\CentralBankService1.xsd">
+    <None Include="Connected Services\CentralBankServiceReference\service1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\CentralBankServiceReference\CentralBankService2.xsd">
+    <None Include="Connected Services\CentralBankServiceReference\XML.CentralBank.Model.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Web.Debug.config">
@@ -135,7 +134,9 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>4475</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:4478/</IISUrl>
+          <IISUrl>http://localhost:4477/</IISUrl>
+          <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
+          <IISAppRootUrl>http://localhost:4477/</IISAppRootUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

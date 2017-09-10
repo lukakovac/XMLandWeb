@@ -19,14 +19,13 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:7421/CentralBankService.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:7421/CentralBankService.svc/mex" Protocol="mex" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="CentralBankService.xsd" MetadataType="Schema" ID="4da618fe-89c1-447c-bb17-c48860983fb8" SourceId="1" SourceUrl="http://localhost:7421/CentralBankService.svc?xsd=xsd1" />
-    <MetadataFile FileName="CentralBankService1.xsd" MetadataType="Schema" ID="938134a8-2589-4a93-b7ba-83fcd12ba45a" SourceId="1" SourceUrl="http://localhost:7421/CentralBankService.svc?xsd=xsd0" />
-    <MetadataFile FileName="CentralBankService.wsdl" MetadataType="Wsdl" ID="fbd9eb2e-2b3f-4a61-b995-6bad3a15b635" SourceId="1" SourceUrl="http://localhost:7421/CentralBankService.svc?wsdl" />
-    <MetadataFile FileName="CentralBankService.disco" MetadataType="Disco" ID="4fdf2977-80bd-408b-b1b1-6c003600f752" SourceId="1" SourceUrl="http://localhost:7421/CentralBankService.svc?disco" />
-    <MetadataFile FileName="CentralBankService2.xsd" MetadataType="Schema" ID="8012d802-5322-49ad-b3c0-f1a6c0862d25" SourceId="1" SourceUrl="http://localhost:7421/CentralBankService.svc?xsd=xsd2" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="5bb4f98e-1c0d-40bc-8b9a-4dd72be211c8" SourceId="1" SourceUrl="http://localhost:7421/CentralBankService.svc/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="f8a3b9d9-55e4-4648-a06e-c4eca3bc233a" SourceId="1" SourceUrl="http://localhost:7421/CentralBankService.svc/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="ede0e347-5fc9-43aa-b99a-30c99b5ccf11" SourceId="1" SourceUrl="http://localhost:7421/CentralBankService.svc/mex" />
+    <MetadataFile FileName="XML.CentralBank.Model.xsd" MetadataType="Schema" ID="842f7cda-ad5f-461f-883c-56eebf8c2d38" SourceId="1" SourceUrl="http://localhost:7421/CentralBankService.svc/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

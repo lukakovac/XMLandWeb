@@ -1,0 +1,98 @@
+@model XML.Company.Models.Invoice
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<form asp-action="Create">
+    <div class="form-horizontal">
+        <h4>Invoice</h4>
+        <hr />
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="MessageId" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="MessageId" class="form-control" />
+                <span asp-validation-for="MessageId" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="SupplierName" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="SupplierName" class="form-control" />
+                <span asp-validation-for="SupplierName" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="SupplierAddress" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="SupplierAddress" class="form-control" />
+                <span asp-validation-for="SupplierAddress" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="PIBSupplier" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="PIBSupplier" class="form-control" />
+                <span asp-validation-for="PIBSupplier" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="BuyerName" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="BuyerName" class="form-control" />
+                <span asp-validation-for="BuyerName" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="BuyerAddress" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="BuyerAddress" class="form-control" />
+                <span asp-validation-for="BuyerAddress" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="BuyerAccount" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="BuyerAccount" class="form-control" />
+                <span asp-validation-for="BuyerAccount" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="BillingDate" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="BillingDate" class="form-control" />
+                <span asp-validation-for="BillingDate" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="GoodsValue" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="GoodsValue" class="form-control" />
+                <span asp-validation-for="GoodsValue" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="ServicePrice" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="ServicePrice" class="form-control" />
+                <span asp-validation-for="ServicePrice" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

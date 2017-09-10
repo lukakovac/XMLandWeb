@@ -9,7 +9,7 @@ using XML.CentralBank.Model;
 
 namespace XML.CentralBank
 {
-    [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single)]
+    [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single, ConcurrencyMode = ConcurrencyMode.Reentrant)]
     public class CentralBankService : ICentralBankService
     {
         private Dictionary<string, IBankCallBack> _banks;
@@ -36,8 +36,21 @@ namespace XML.CentralBank
         public void RTGSRequest(MT103 requestMessage)
         {
             Console.WriteLine("REQUEST");
-            _banks[requestMessage.RecipientAccount.Substring(0, 3)].MT103Callback(requestMessage);
-            _banks[requestMessage.PayerAccount.Substring(0, 3)].MT900CallBack(new MT900() { PayerBankAccountNumber = requestMessage.PayerBankAccountNumber, Ammount = requestMessage.Ammount});
+            try
+            {
+                var recipientBank = _banks[requestMessage.RecipientAccount.Substring(0, 3)];
+                recipientBank.MT103Callback(requestMessage);
+            }
+            catch
+            {
+                return;
+            }
+            var payerBank = _banks[requestMessage.PayerAccount.Substring(0, 3)];
+
+            if(payerBank != null)
+            {
+                payerBank.MT900CallBack(new MT900() { PayerBankAccountNumber = requestMessage.PayerBankAccountNumber, Ammount = requestMessage.Ammount });
+            }
         }
     }
 }
